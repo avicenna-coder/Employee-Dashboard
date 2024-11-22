@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="dashboard-main-container">
+        <div class="employee-dashboard-with-icon">
+            <div class="employee-dashboard">
+                    <h2>Employee Dashboard</h2>
+            </div>
+            <div class="with-icon">
+                    <i class="fa-brands fa-github"></i>
+            </div>
+        </div>
+        <div class="employee-record-container">
+            <div class="employee-salaries-button">
+                <div class="employee-salaries">
+                    <p>Employee Salaries</p>
+                </div>
+                 <div class="add-employee-button">
+                   <button>Add Employee</button>
+                </div>
+             </div>
+             <table>
+              <thead>
+                <tr>
+                  <th>EMPLOYEE ID</th>
+                  <th>FIRST NAME</th>
+                  <th>LAST NAME</th>
+                  <th>CITY</th>
+                  <th>CTC</th>
+                  <th>SALARY/MONTH</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                 <td><input type="text"></td>
+                 <td><input type="text"></td>
+                 <td><input type="text"></td>
+                 <td><input type="text"></td>
+                 <td><input type="text"></td>
+                  <td><button class="details-btn">Details</button></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="figure-click-container">
+            <button>1</button>
+        </div>
+        <div class="employee-salary-structure-container">
+            <div class="employee-salary-structure">
+                <h2>Employee Salary Structure</h2>
+                <button><i class="fa-solid fa-x"></i></button>
+            </div>
+            <div class="salary-deductions-container">
+                <div class="salary-container">
+                    <p>Salary</p>
+                    <div class="basic-pay-container">
+                        <p>Basic Salary</p>
+                        <form class="basic-pay">
+                            <button>#</button>
+                            <input type="text" id="basicPay">
+                        </form>
+                    </div>
+                </div>
+                <div class="deductions-container">
+                    <p>Bonus</p>
+                    <div class="professional-tax-container">
+                        <p>Bonus %</p>
+                        <form class="basic-pay">
+                            <button>#</button>
+                            <input type="text" id="professionalTax">
+                        </form>
+                    </div>
+                </div>
+                <div class="total-container">
+                    <p>Base Salary/Bonus</p>
+                    <div class="total-salary-container">
+                        <p>Total</p>
+                        <form class="Total-pay">
+                            <button>#</button>
+                            <input type="text" id="total">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="all-employees-salary">
+                <button>Calculate Total Payment</button>
+                <div class="description-container">
+                    <P>This is the total payment for all employees in a month</P>
+                </div>
+                <div class="amount">
+                    <p>#10000000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

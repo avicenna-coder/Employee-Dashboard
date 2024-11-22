@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+:root{
+    /* BACKGROUND COLORS */
+
+    /* Main Container Color*/
+    --mainContainerColor : white;
+    /* Employee Dashboard Container, Button,*/
+    --dashboardBackgroundColor: #0077b6;
+    /* Employee Salaries Background Colors*/
+    --firstContainerColor : #adb5bd;
+    --OneContainerColor: #e5d8ee;
+    --secondContainerColor: #ced4da;
+    --thirdContainerColor: #dee2e6;
+    /* InputButtonColor */
+    --buttonBackgroundColor: #ced4da;
+    /* Text Color */
+    --RecordTextColor: #495057;
+
+    /* PADDING */
+    /* Employee Dashboad, Employee Salaries, Employee Records */
+    --smallPadding: 1rem;
+    --smallerPadding: 0.75rem;
+    --bigPadding: 2rem;
+    --inputEmployee: 0.5rem 0.75rem;
+     
+    /* ROW GAPS AND COLUMN GAPS */
+    --smallRowGap: 1rem;
+    --BigColumnGap: 3rem;
+
+    /* FONTS */
+    /* Heading Texts, Paragraph Texts, Button Texts */
+    --BigText : 1rem;
+    --BiggerText: 1.5rem;
+    --smallText: 0.75rem;
+}
+
+.dashboard-main-container{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--mainContainerColor);
+    padding: var(--smallPadding);
+    row-gap: var(--smallRowGap);
+}
+
+.employee-dashboard-with-icon{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    justify-content: space-between;
+    align-items: start;
+    background-color: var(--dashboardBackgroundColor);
+    padding: var(--smallPadding);
+}
+
+.employee-dashboard{
+    width:fit-content;
+    height:auto;
+}
+
+.with-icon{
+    width:fit-content;
+    height:auto;
+}
+
+.with-icon i{
+    font-size: 2rem;
+    color: white
+}
+
+.employee-record-container{
+    width:100%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.employee-salaries-button{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.employee-salaries{
+    width: fit-content;
+    height:auto;
+}
+
+.employee-salaries p{
+    font-size: var(--BiggerText);
+}
+
+.add-employee-button{
+    width:fit-content;
+    height:auto;
+}
+
+.add-employee-button button{
+    padding: var(--smallPadding);
+    background-color: var(--dashboardBackgroundColor);
+    color:var(--mainContainerColor);
+    font-size: var(--bigText);
+    outline:none;
+    border:none;
+    border-radius: 0.75rem;
+}
+
+table {
+  width: 100%;
+  height:auto;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color:var(--firstContainerColor);
+  border:none;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: var(--smallPadding);
+  text-align: left;
+  border:none;
+}
+
+tbody tr:nth-child(1) {
+  background-color: var(--OneContainerColor);
+}
+tbody tr:nth-child(2) {
+  background-color: var(--secondContainerColor);
+}
+tbody tr:nth-child(3) {
+  background-color: var(--thirdContainerColor);
+}
+tbody tr:nth-child(4) {
+  background-color: var(--secondContainerColor);
+}
+
+td button {
+    padding: var(--smallerPadding);
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    color: var(--mainContainerColor);
+    background-color: var(--dashboardBackgroundColor);
+    cursor: pointer;
+}
+
+input{
+  padding: var(--inputEmployee);
+  font-size: var(--bigText);
+  width:50%;
+}
+
+.figure-click-container{
+  width:100%;
+  height:auto;
+  text-align: center;
+}
+
+.figure-click-container button{
+  background-color: var(--dashboardBackgroundColor);
+  padding: 0.5rem 1rem;
+  outline:none;
+  border:None;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color:var(--mainContainerColor)
+}
+
+.employee-salary-structure-container{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: var(--smallPadding);
+  background-color: var(--firstContainerColor);
+}
+
+.employee-salary-structure{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-salary-structure h2{
+  font-size: var(--BiggerText);
+}
+
+.employee-salary-structure button{
+  border:none;
+  outline:none;
+  border-radius: 50%;
+  border: 3px solid var(--dashboardBackgroundColor);
+  padding: 0.5rem;
+  background-color: var(--firstContainerColor);
+}
+
+.employee-salary-structure i{
+  font-size: 1rem;
+  font-weight:bold;
+  color:var(--dashboardBackgroundColor);
+}
+
+.salary-deductions-container{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+}
+
+.salary-container{
+  width:100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
