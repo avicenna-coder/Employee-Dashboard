@@ -22,7 +22,7 @@
                 <div class="employee-salaries">
                     <p>Employee Salaries</p>
                 </div>
-                 <div class="add-employee-button">
+                 <div class="add-employee-button" id="add-employee-button">
                    <button>Add Employee</button>
                 </div>
              </div>
@@ -33,25 +33,26 @@
                   <th>FIRST NAME</th>
                   <th>LAST NAME</th>
                   <th>CITY</th>
-                  <th>CTC</th>
+                  <th>YEAR</th>
                   <th>SALARY/MONTH</th>
                   <th>ACTION</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                 <td><input type="text"></td>
-                 <td><input type="text"></td>
-                 <td><input type="text"></td>
-                 <td><input type="text"></td>
-                 <td><input type="text"></td>
-                  <td><button class="details-btn">Details</button></td>
-                </tr>
+              <form id="form">
+                <tbody id="tableBody" class="tableBody">
+                    <tr class="hidden-row">
+                        <td>1</td>
+                        <td><input type="text" id="firstName"></td>
+                        <td><input type="text" id="lastName"></td>
+                        <td><input type="text" id="city"></td>
+                        <td><input type="text" id="year"></td>
+                        <td><input type="text" id="baseSalary"></td>
+                        <td><button type="submit" id="submit">Details</button></td>
+                       </tr>
               </tbody>
+              </form>
             </table>
-        </div>
-        <div class="figure-click-container">
+            <div class="figure-click-container">
             <button>1</button>
         </div>
         <div class="employee-salary-structure-container">
@@ -61,30 +62,33 @@
             </div>
             <div class="salary-deductions-container">
                 <div class="salary-container">
-                    <p>Salary</p>
+                    <h3>Salary</h3>
+                    <hr>
                     <div class="basic-pay-container">
                         <p>Basic Salary</p>
-                        <form class="basic-pay">
+                        <form class="basic-pay" id="basicForm">
                             <button>#</button>
                             <input type="text" id="basicPay">
                         </form>
                     </div>
                 </div>
                 <div class="deductions-container">
-                    <p>Bonus</p>
+                    <h3>Bonus</h3>
+                    <hr>
                     <div class="professional-tax-container">
                         <p>Bonus %</p>
-                        <form class="basic-pay">
+                        <form class="basic-pay" id="bonusPercent">
                             <button>#</button>
-                            <input type="text" id="professionalTax">
+                            <input type="text" id="bonus">
                         </form>
                     </div>
                 </div>
                 <div class="total-container">
-                    <p>Base Salary/Bonus</p>
+                    <h3>Base Salary/Bonus</h3>
+                    <hr>
                     <div class="total-salary-container">
                         <p>Total</p>
-                        <form class="Total-pay">
+                        <form class="Total-pay" id="totalSalary">
                             <button>#</button>
                             <input type="text" id="total">
                         </form>
@@ -94,12 +98,13 @@
             <div class="all-employees-salary">
                 <button>Calculate Total Payment</button>
                 <div class="description-container">
-                    <P>This is the total payment for all employees in a month</P>
+                    <P>This is the total payment for all employees in a month.</P>
                 </div>
                 <div class="amount">
                     <p>#10000000</p>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <script src="./index.js"></script>

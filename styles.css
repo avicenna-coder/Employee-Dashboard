@@ -12,7 +12,7 @@
     /* Main Container Color*/
     --mainContainerColor : white;
     /* Employee Dashboard Container, Button,*/
-    --dashboardBackgroundColor: #0077b6;
+    --dashboardBackgroundColor: #6930c3;
     /* Employee Salaries Background Colors*/
     --firstContainerColor : #adb5bd;
     --OneContainerColor: #e5d8ee;
@@ -27,11 +27,15 @@
     /* Employee Dashboad, Employee Salaries, Employee Records */
     --smallPadding: 1rem;
     --smallerPadding: 0.75rem;
+    --notTooBigPadding: 0.87rem;
     --bigPadding: 2rem;
     --inputEmployee: 0.5rem 0.75rem;
+    --calculateTotalPayment: 0.5rem 1rem;
+    --EmployeeSalaryandStructure: 0 3rem;
      
     /* ROW GAPS AND COLUMN GAPS */
     --smallRowGap: 1rem;
+    --smallerRowGap: 0.5rem;
     --BigColumnGap: 3rem;
 
     /* FONTS */
@@ -71,6 +75,10 @@
     height:auto;
 }
 
+.employee-dashboard h2{
+  color:var(--mainContainerColor)
+}
+
 .with-icon{
     width:fit-content;
     height:auto;
@@ -88,6 +96,8 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    row-gap: var(--smallRowGap);
+    padding:var(--EmployeeSalaryandStructure);
 }
 
 .employee-salaries-button{
@@ -118,9 +128,11 @@
     background-color: var(--dashboardBackgroundColor);
     color:var(--mainContainerColor);
     font-size: var(--bigText);
+    font-weight: 600;
     outline:none;
     border:none;
     border-radius: 0.75rem;
+    cursor:pointer;
 }
 
 table {
@@ -135,6 +147,12 @@ thead {
   border-collapse: collapse;
 }
 
+thead tr:nth-child(1) {
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+
 th, td {
   padding: var(--smallPadding);
   text-align: left;
@@ -143,15 +161,19 @@ th, td {
 
 tbody tr:nth-child(1) {
   background-color: var(--OneContainerColor);
+  display: table-row;
 }
 tbody tr:nth-child(2) {
   background-color: var(--secondContainerColor);
+  display: table-row;
 }
 tbody tr:nth-child(3) {
   background-color: var(--thirdContainerColor);
+  display: table-row;
 }
 tbody tr:nth-child(4) {
   background-color: var(--secondContainerColor);
+  display: table-row;
 }
 
 td button {
@@ -194,7 +216,9 @@ input{
   justify-content: start;
   align-items: start;
   padding: var(--smallPadding);
-  background-color: var(--firstContainerColor);
+  background-color: var(--thirdContainerColor);
+  row-gap: var(--smallRowGap);
+  border-radius: 0.5rem;
 }
 
 .employee-salary-structure{
@@ -215,8 +239,9 @@ input{
   outline:none;
   border-radius: 50%;
   border: 3px solid var(--dashboardBackgroundColor);
-  padding: 0.5rem;
-  background-color: var(--firstContainerColor);
+  padding: 0.3rem;
+  background-color: var(--secondContainerColor);
+  cursor: pointer;
 }
 
 .employee-salary-structure i{
@@ -234,12 +259,105 @@ input{
   align-items: start;
 }
 
-.salary-container{
+.salary-container, .deductions-container,.total-container {
   width:100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  row-gap: var(--smallerRowGap);
 }
 
+hr{
+  width: 70%;
+  height: 2px;
+  background-color:#bec7cf;
+}
+
+.salary-container h3, .deductions-container h3, .total-container h3{
+  color:var(--dashboardBackgroundColor)
+}
+
+.basic-pay-container, .professional-tax-container, .total-salary-container{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: var(--smallerRowGap);
+}
+
+.basic-pay-container p, .professional-tax-container p, .total-salary-container p{
+  
+}
+
+.basic-pay, .Total-pay{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+}
+
+.basic-pay button, .Total-pay button{
+  padding: var(--smallerPadding);
+  outline:none;
+  border: none;
+  background-color: var(--firstContainerColor);
+  color:black;
+  font-size: var(--BigText);
+  cursor: pointer;
+}
+
+.basic-pay input, .Total-pay input{
+  width:30%;
+  height:auto;
+  outline:none;
+  border:none;
+  padding: var(--smallerPadding);
+  border: 1px solid var(--firstContainerColor)
+}
+
+.all-employees-salary{
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  row-gap: var(--smallerRowGap);
+}
+
+.all-employees-salary button{
+  outline:none;
+  border:none;
+  background-color: var(--dashboardBackgroundColor);
+  padding: var(--calculateTotalPayment);
+  font-size: var(--bigText);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--mainContainerColor);
+  cursor: pointer;
+}
+
+.description-container{
+  width:fit-content;
+  height:auto;
+}
+
+.description-container p{
+  color:#495057;
+}
+
+.amount{
+  width: fit-content;
+  height:auto;
+}
+
+.amount p{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
